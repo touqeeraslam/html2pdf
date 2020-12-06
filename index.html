@@ -57,7 +57,7 @@
       // Create instance of html2pdf class
       html2pdf().from(element).set(options).save();
 
-      // element.style.display = 'none';
+      element.style.display = 'none';
      
       // exporter.getPdf(true).then(function(pdf) {
        
@@ -68,7 +68,7 @@
       // });
 
       var element = document.getElementById('form-content');
-alert('running your test case')
+alert('pdf is about to open')
 // Define optional configuration
 var options = {
   filename: 'my-file.pdf'
