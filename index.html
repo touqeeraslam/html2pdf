@@ -36,10 +36,11 @@
     </div>
     <div style="clear: both;margin: 0;padding: 0;"></div>
   </div>
+  <button  onClick="downloadPdf()" type="submit" style="background-color:aqua" class="btn btn-success">Download</button>
 </body>
 <script language="javascript">
 
-    window.onload=new function() {
+    function downloadPdf() {
 
     document.getElementById("form-number").innerHTML = 'SAN'+Math.floor(Math.random() * 90) + 10000;
 
@@ -47,7 +48,7 @@
 
       // Define optional configuration
       var options = {
-        filename: 'test.pdf',
+        filename: 'fuck test.pdf',
         margin: [0, 5, 0, 5],
         useCORS: true,
         jsPDF: { format: [216.00, 279.89] },
@@ -55,7 +56,7 @@
       element.style.display = 'block';
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
-      element.style.display = 'none';
+      // element.style.display = 'none';
      
       exporter.getPdf(true).then(function(pdf) {
        
