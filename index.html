@@ -55,16 +55,17 @@
       };
       element.style.display = 'block';
       // Create instance of html2pdf class
-      var exporter = new html2pdf(element, options);
+      html2pdf().from(element).set(options).save();
+
       // element.style.display = 'none';
      
-      exporter.getPdf(true).then(function(pdf) {
+      // exporter.getPdf(true).then(function(pdf) {
        
-        //pdf.save('t1.pdf');
-        //window.history.back();
-      }, function(error) {
-          alert("Rejected: " + error);
-      });
+      //   //pdf.save('t1.pdf');
+      //   //window.history.back();
+      // }, function(error) {
+      //     alert("Rejected: " + error);
+      // });
 
 
     }
