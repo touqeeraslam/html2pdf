@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <!-- <script src="js/html2pdf.min.js"></script> -->
+  <!-- <script src="js/html2pdf.min.js"></script> -->
+ 
+</head>
+
+<body>
+  <div id="form-content" style="padding:25px 35px 35px 35px; width: 720px;font-family: arial;font-size:10px !important;display: none;">
+    <div style="display:flex;align-items:center;justify-content: space-between;position: relative;top: -0.2px;">
+      <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;left: -0.2px;"></div>
+      <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;top: -4px;right: 5px;"></div>
+    </div>
+
+    <div style="margin-top: 11px;padding-left: 20px;padding-right: 3px;">
+      <div style="font-stretch: expanded;text-align: center;font-size: 13.25px;letter-spacing:0.057px;position: relative;left: 10.2px;"><span><strong> Sample Request Form</strong></span></div>
+    
+    
+
+      <div style="text-align:right;font-size:11.11px;margin-top: 19px;margin-right: -4px;"><span>Form # <span style="color: #000000;"><span
+              id="form-number">SAN0000000</span></span></span> <span
+          style="padding-left: 32px;display: inline-block;">Source code <span
+            style="color: #000000;">SANFX27904</span></span></div>
+
+      <div style="margin-top: 0.5px;padding-left: 3px;margin-right: -2px;">
+        <span style="font-weight: bold;font-size: 11.89px; line-height: 2;letter-spacing: -0.0351px;">Sample and Material Request (please check boxes to confirm items requested):</span>
+       
+      </div>
+
+  
+
+
+     
+    </div>
+    <div style="clear: both;margin: 0;padding: 0;"></div>
+  </div>
+</body>
+<script language="javascript">
+
+    window.onload=new function() {
+
+    document.getElementById("form-number").innerHTML = 'SAN'+Math.floor(Math.random() * 90) + 10000;
+
+      var element = document.getElementById('form-content');
+
+      // Define optional configuration
+      var options = {
+        filename: 'test.pdf',
+        margin: [0, 5, 0, 5],
+        useCORS: true,
+        jsPDF: { format: [216.00, 279.89] },
+      };
+      element.style.display = 'block';
+      // Create instance of html2pdf class
+      var exporter = new html2pdf(element, options);
+      element.style.display = 'none';
+     
+      exporter.getPdf(true).then(function(pdf) {
+       
+        //pdf.save('t1.pdf');
+        //window.history.back();
+      }, function(error) {
+          alert("Rejected: " + error);
+      });
+
+
+    }
+
+  </script>
+</html>
