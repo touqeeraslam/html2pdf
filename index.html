@@ -67,6 +67,31 @@
       //     alert("Rejected: " + error);
       // });
 
+      var element = document.getElementById('form-content');
+alert('running your test case')
+// Define optional configuration
+var options = {
+  filename: 'my-file.pdf'
+};
+
+// Create instance of html2pdf class
+var exporter = new html2pdf(element, options);
+
+// Download the PDF or...
+exporter.getPdf(true).then((pdf) => {
+  console.log('pdf file downloaded');
+});
+
+// Get the jsPDF object to work with it
+exporter.getPdf(false).then((pdf) => {
+  console.log('doing something before downloading pdf file');
+  pdf.save();
+});
+
+// You can also use static methods for one time use...
+options.source = element;
+options.download = true;
+html2pdf.getPdf(options);
 
     }
 
