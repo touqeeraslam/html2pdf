@@ -57,10 +57,10 @@
       }
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
-      // element.style.display = 'none';
+      // 
      
       exporter.getPdf(true).then(function(pdf) {
-       
+        element.style.display = 'none';
         //pdf.save('t1.pdf');
         //window.history.back();
       }, function(error) {
