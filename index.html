@@ -52,8 +52,9 @@
       // Download the PDF or...
       exporter.getPdf(true).then((pdf) => {
         console.log('pdf file downloaded');
+              element.style.display = 'none';
+
       });
-      element.style.display = 'none';
 
     }
 
