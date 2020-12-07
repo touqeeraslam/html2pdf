@@ -40,7 +40,7 @@
       document.getElementById("form-number").innerHTML = 'VRG'+Math.floor(Math.random() * 90) + 10000;
 
 
-      var element = document.getElementById('form-content');
+      var element = document.getElementById('form-content').innerHTML;
 
       // Define optional configuration
       var options = {
@@ -51,26 +51,26 @@
         html2canvas: { scale: 5, logging: true, dpi: 200, letterRendering: true },
         jsPDF: { format: [216.00, 279.89] },
       };
-      element.style.display = 'block';
+      // element.style.display = 'block';
       
       if(is_safari){
       }
       // Create instance of html2pdf class
       html2pdf(element, options);
       // 
-      alert('fuck it')
+      // alert('fuck it')
       // element.style.display === 'block'?  :element.style.display= '';
 
-      var ua = navigator.userAgent.toLowerCase(); 
-      if (ua.indexOf('safari') != -1) { 
-        alert('Your browser does not support');
-        html2pdf().from(element).set(options).save();
-        element.style.display= 'none';
+      // var ua = navigator.userAgent.toLowerCase(); 
+      // if (ua.indexOf('safari') != -1) { 
+      //   alert('Your browser does not support');
+      //   html2pdf().from(element).set(options).save();
+      //   element.style.display= 'none';
 
-      } else {
-        // element.style.display= 'none';
-        element.style.display= 'none';
-      }
+      // } else {
+      //   // element.style.display= 'none';
+      //   element.style.display= 'none';
+      // }
       // exporter.getPdf(true).then(function(pdf) {
       //   //pdf.save('t1.pdf');
       //   //window.history.back();
@@ -145,7 +145,7 @@
 </head>
 
 <body onload="downloadPDF();">
-  <div id="form-content" style="padding:25px 33px 35px 35px; width: 720px;font-family: arial;font-size:10px !important;display: none;color: #000000;">
+  <div id="form-content" style="padding:25px 33px 35px 35px; width: 720px;font-family: arial;font-size:10px !important;display: none;color: #000000; display: none">
     <div style="display:flex;align-items:center;justify-content: space-between;position: relative;top: -0.2px;">
       <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;left: -0.2px;"></div>
       <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;top: -4px;right: 5px;"></div>
