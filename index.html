@@ -52,6 +52,9 @@
         jsPDF: { format: [216.00, 279.89] },
       };
       element.style.display = 'block';
+      if(is_safari){
+        html2pdf().from(element).set(options).save();
+      }
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
       element.style.display = 'none';
@@ -63,12 +66,7 @@
       }, function(error) {
           alert("Rejected: " + error);
       });
-      if(is_safari){
-        alert('i am working');
-        element.style.display = 'block';
-
-        html2pdf().from(element).set(options).save();
-      }
+      
 
 
 
