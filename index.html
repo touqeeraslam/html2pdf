@@ -65,11 +65,11 @@
 }
       var ua = navigator.userAgent.toLowerCase(); 
       if (isMobileSafari()) { 
+        
         var element = document.getElementById('form-content');
-
+        element.style.display= 'block';
         // alert('Your browser does not support');
         html2pdf().from(element).set(options).save();
-        // element.style.display= 'none';
 
       } else {
         // element.style.display= 'none';
