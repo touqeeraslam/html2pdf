@@ -41,7 +41,6 @@
 
     window.onload=new function() {
       var element = document.getElementById('form-content');
-      alert('pdf is about to open')
       // Define optional configuration
       var options = {
         filename: 'my-file.pdf'
@@ -54,18 +53,7 @@
       exporter.getPdf(true).then((pdf) => {
         console.log('pdf file downloaded');
       });
-
-      // Get the jsPDF object to work with it
-      exporter.getPdf(false).then((pdf) => {
-        console.log('doing something before downloading pdf file');
-        pdf.save();
-      });
-
-      // You can also use static methods for one time use...
-      options.source = element;
-      options.download = true;
-      html2pdf.getPdf(options);
-            element.style.display = 'none';
+      element.style.display = 'none';
 
     }
 
