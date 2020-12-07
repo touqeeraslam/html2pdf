@@ -60,9 +60,8 @@
       // 
      
       exporter.getPdf(true).then(function(pdf) {
-        element.style.display = 'none';
         //pdf.save('t1.pdf');
-        //window.history.back();
+        window.history.back();
       }, function(error) {
           alert("Rejected: " + error);
       });
