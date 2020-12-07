@@ -68,7 +68,7 @@
         
         var element = document.getElementById('form-content');
         element.style.display= 'block';
-        // alert('Your browser does not support');
+        alert(element.style.display);
         html2pdf().from(element).set(options).save();
 
       } else {
