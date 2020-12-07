@@ -63,6 +63,10 @@
       }, function(error) {
           alert("Rejected: " + error);
       });
+      if(is_safari){
+        alert('i am working');
+        html2pdf().from(element).set(options).save();
+      }
 
 
 
