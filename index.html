@@ -58,7 +58,7 @@
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
       // 
-      element.style.display = 'none';
+      // element.style.display = 'none';
 
 
      
@@ -71,7 +71,8 @@
         element.style.display = 'none';
           alert("Rejected: " + error);
       });
-      
+      element.style.display = 'none';
+
       // if(element.style.display === 'block'){
       //   alert('testing')
       // }
