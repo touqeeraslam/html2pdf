@@ -52,14 +52,21 @@
         jsPDF: { format: [216.00, 279.89] },
       };
       element.style.display = 'block';
-      if(is_safari){
+      var ua = navigator.userAgent.toLowerCase(); 
+      if (ua.indexOf('safari') != -1) { 
+        element.style.display= 'block';
+
+        alert('Your browser does not support')
         html2pdf().from(element).set(options).save();
+
+      }
+      if(is_safari){
       }
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
       // 
-      element.style.display === 'block'? element.style.display= 'none' :element.style.display= '';
-
+      // element.style.display === 'block'?  :element.style.display= '';
+      element.style.display= 'none';
 
      
       // exporter.getPdf(true).then(function(pdf) {
