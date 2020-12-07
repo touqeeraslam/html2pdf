@@ -61,16 +61,16 @@
       // alert('fuck it')
       // element.style.display === 'block'?  :element.style.display= '';
 
-      // var ua = navigator.userAgent.toLowerCase(); 
-      // if (ua.indexOf('safari') != -1) { 
-      //   alert('Your browser does not support');
-      //   html2pdf().from(element).set(options).save();
-      //   element.style.display= 'none';
+      var ua = navigator.userAgent.toLowerCase(); 
+      if (ua.indexOf('safari') != -1) { 
+        alert('Your browser does not support');
+        html2pdf().from(element).set(options).save();
+        element.style.display= 'none';
 
-      // } else {
-      //   // element.style.display= 'none';
-      //   element.style.display= 'none';
-      // }
+      } else {
+        // element.style.display= 'none';
+        element.style.display= 'none';
+      }
       // exporter.getPdf(true).then(function(pdf) {
       //   //pdf.save('t1.pdf');
       //   //window.history.back();
