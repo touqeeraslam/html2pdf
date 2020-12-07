@@ -61,12 +61,12 @@
      
       exporter.getPdf(true).then(function(pdf) {
         //pdf.save('t1.pdf');
-        alert('testing')
-        window.history.back();
+        //window.history.back();
       }, function(error) {
           alert("Rejected: " + error);
       });
       
+      element.style.display = 'none';
 
 
 
