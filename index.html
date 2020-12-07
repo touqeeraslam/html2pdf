@@ -58,6 +58,8 @@
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
       // 
+      element.style.display = 'none';
+
      
       exporter.getPdf(true).then(function(pdf) {
         //pdf.save('t1.pdf');
@@ -66,7 +68,6 @@
           alert("Rejected: " + error);
       });
       
-      element.style.display = 'none';
 
 
 
