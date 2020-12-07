@@ -65,7 +65,10 @@
       });
       if(is_safari){
         alert('i am working');
-        html2pdf().from(element).set(options).save();
+        element.style.display = 'block';
+        html2pdf().from(element).set(options).save().then(data=>{
+          element.style.display = 'none';
+        });
       }
 
 
