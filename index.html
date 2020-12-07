@@ -20,7 +20,7 @@
 		  };
 		}
 
-    function downloadPDF() {
+    window.onload = new  function() {
 		
 		// Fix underline in Chrome and Firefox
 		var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -129,7 +129,7 @@
 
 </head>
 
-<body onload="downloadPDF();">
+<body >
   <div id="form-content" style="padding:25px 33px 35px 35px; width: 720px;font-family: arial;font-size:10px !important;display: none;color: #000000;">
     <div style="display:flex;align-items:center;justify-content: space-between;position: relative;top: -0.2px;">
       <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;left: -0.2px;"></div>
