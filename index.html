@@ -60,9 +60,11 @@
       // 
       // alert('fuck it')
       // element.style.display === 'block'?  :element.style.display= '';
-
+      function isMobileSafari() {
+    return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
+}
       var ua = navigator.userAgent.toLowerCase(); 
-      if (ua.indexOf('safari') != -1) { 
+      if (isMobileSafari()) { 
         alert('Your browser does not support');
         html2pdf().from(element).set(options).save();
         element.style.display= 'none';
