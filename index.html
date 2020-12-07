@@ -20,7 +20,7 @@
 		  };
 		}
 
-    window.onload = new  function() {
+    function downloadPDF() {
 		
 		// Fix underline in Chrome and Firefox
 		var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -54,7 +54,7 @@
       element.style.display = 'block';
       // Create instance of html2pdf class
       var exporter = new html2pdf(element, options);
-      // element.style.display = 'none';
+      element.style.display = 'none';
      
       exporter.getPdf(true).then(function(pdf) {
        
@@ -66,9 +66,8 @@
       if(is_safari){
         alert('i am working');
         element.style.display = 'block';
-        html2pdf().from(element).set(options).save().then(data=>{
-          element.style.display = 'none';
-        });
+
+        html2pdf().from(element).set(options).save();
       }
 
 
@@ -129,7 +128,7 @@
 
 </head>
 
-<body >
+<body onload="downloadPDF();">
   <div id="form-content" style="padding:25px 33px 35px 35px; width: 720px;font-family: arial;font-size:10px !important;display: none;color: #000000;">
     <div style="display:flex;align-items:center;justify-content: space-between;position: relative;top: -0.2px;">
       <div style="width: 16.2px;height: 16.44px;background-color: #000000;position: relative;left: -0.2px;"></div>
