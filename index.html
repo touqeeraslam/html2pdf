@@ -40,7 +40,7 @@
       document.getElementById("form-number").innerHTML = 'VRG'+Math.floor(Math.random() * 90) + 10000;
 
 
-      var element = document.getElementById('form-content').innerHTML;
+      var element = document.getElementById('form-content');
 
       // Define optional configuration
       var options = {
@@ -65,9 +65,11 @@
 }
       var ua = navigator.userAgent.toLowerCase(); 
       if (isMobileSafari()) { 
-        alert('Your browser does not support');
+        var element = document.getElementById('form-content');
+
+        // alert('Your browser does not support');
         html2pdf().from(element).set(options).save();
-        element.style.display= 'none';
+        // element.style.display= 'none';
 
       } else {
         // element.style.display= 'none';
