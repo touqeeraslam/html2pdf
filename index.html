@@ -36,11 +36,10 @@
     </div>
     <div style="clear: both;margin: 0;padding: 0;"></div>
   </div>
-  <button  onClick="downloadPdf()" type="submit" style="background-color:aqua" class="btn btn-success">Download</button>
 </body>
 <script language="javascript">
 
-    function downloadPdf() {
+    window.onload=new function() {
       var element = document.getElementById('form-content');
       alert('pdf is about to open')
       // Define optional configuration
